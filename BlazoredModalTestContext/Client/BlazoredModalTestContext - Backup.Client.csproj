@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Shared\BlazoredModalTestContext.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Counter\Components\NewFolder\" />
+  </ItemGroup>
+
 </Project>

@@ -5,9 +5,11 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Blazored.Modal;
+using Fluxor;
 
 namespace BlazoredModalTestContext.Client
 {
@@ -21,6 +23,7 @@ namespace BlazoredModalTestContext.Client
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             builder.Services.AddBlazoredModal();
+            builder.Services.AddFluxor(options => options.ScanAssemblies(typeof(Program).Assembly));
 
             await builder.Build().RunAsync();
         }
