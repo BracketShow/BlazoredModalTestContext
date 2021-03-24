@@ -19,11 +19,11 @@ namespace BlazoredModalTestContext.Client.Counter.Components.Modals
 
         private int increment = 0;
 
-        public void SubmitOnValidFormAsync()
+        public async Task SubmitOnValidFormAsync()
         {
             Dispatcher.Dispatch(new IncrementCountAction(increment));
 
-            ModalInstance.CloseAsync();
+            await ModalInstance.CloseAsync();
         }
     }
 }

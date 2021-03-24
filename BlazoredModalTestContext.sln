@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazoredModalTestContext.Server", "BlazoredModalTestContext\Server\BlazoredModalTestContext.Server.csproj", "{D31878C4-04FB-4EBE-8220-E42CE4828C2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazoredModalTestContext.Server", "BlazoredModalTestContext\Server\BlazoredModalTestContext.Server.csproj", "{D31878C4-04FB-4EBE-8220-E42CE4828C2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazoredModalTestContext.Client", "BlazoredModalTestContext\Client\BlazoredModalTestContext.Client.csproj", "{8371013B-4FA4-42E4-9729-F69CE93F62E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazoredModalTestContext.Client", "BlazoredModalTestContext\Client\BlazoredModalTestContext.Client.csproj", "{8371013B-4FA4-42E4-9729-F69CE93F62E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazoredModalTestContext.Shared", "BlazoredModalTestContext\Shared\BlazoredModalTestContext.Shared.csproj", "{3155AE1A-ED5F-4988-A7CB-E223B1C04E62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazoredModalTestContext.Shared", "BlazoredModalTestContext\Shared\BlazoredModalTestContext.Shared.csproj", "{3155AE1A-ED5F-4988-A7CB-E223B1C04E62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazoredModalTestContext.Client.Tests", "BlazoredModalTestContext.Client.Tests\BlazoredModalTestContext.Client.Tests.csproj", "{29E4C2AD-355B-42DE-B681-AF6B2CC4515E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{3155AE1A-ED5F-4988-A7CB-E223B1C04E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3155AE1A-ED5F-4988-A7CB-E223B1C04E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3155AE1A-ED5F-4988-A7CB-E223B1C04E62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E4C2AD-355B-42DE-B681-AF6B2CC4515E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E4C2AD-355B-42DE-B681-AF6B2CC4515E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E4C2AD-355B-42DE-B681-AF6B2CC4515E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E4C2AD-355B-42DE-B681-AF6B2CC4515E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
