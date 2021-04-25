@@ -1,7 +1,4 @@
 using Microsoft.AspNetCore.Components;
-using System;
-using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
 using Blazored.Modal;
 using BlazoredModalTestContext.Client.Counter.Store.IncrementCount;

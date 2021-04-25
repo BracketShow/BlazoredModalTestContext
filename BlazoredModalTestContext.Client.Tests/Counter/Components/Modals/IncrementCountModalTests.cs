@@ -18,7 +18,22 @@ namespace BlazoredModalTestContext.Client.Counter.Components.Modals
         }
 
         [Fact]
-        public void SubmitOnValidFormAsync_ShouldDispatchTheActionWithTheIncrement()
+        public void Failing_SubmitOnValidFormAsync_ShouldDispatchTheActionWithTheIncrement()
+        {
+            var cut = RenderComponent<IncrementCountModal>();
+
+            var incrementInput = cut.Find("input");
+            incrementInput.Change(new ChangeEventArgs() { Value = "5" });
+
+            var form = cut.Find("form");
+            form.Submit();
+
+            dispatcherMock.Verify(d => 
+                d.Dispatch(It.Is<IncrementCountAction>(a => a.Increment == 5)));
+        }
+
+        [Fact]
+        public void Working_SubmitOnValidFormAsync_ShouldDispatchTheActionWithTheIncrement()
         {
             var cut = RenderModalComponentInsideCascadingBlazoredModal<IncrementCountModal>();
 
@@ -28,7 +43,8 @@ namespace BlazoredModalTestContext.Client.Counter.Components.Modals
             var form = cut.Find("form");
             form.Submit();
 
-            dispatcherMock.Verify(d => d.Dispatch(It.Is<IncrementCountAction>(a => a.Increment == 5)));
+            dispatcherMock.Verify(d => 
+                d.Dispatch(It.Is<IncrementCountAction>(a => a.Increment == 5)));
         }
     }
 }

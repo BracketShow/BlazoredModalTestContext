@@ -5,7 +5,7 @@ using Bunit;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BlazoredModalTestContext.Client.Counter.Components.Modals
+namespace BlazoredModalTestContext.Client
 {
     public abstract class BlazoredModalTestContext : TestContext
     {
@@ -36,7 +36,6 @@ namespace BlazoredModalTestContext.Client.Counter.Components.Modals
 
             var modal = RenderComponent<CascadingBlazoredModal>(parameters =>
                 parameters.AddCascadingValue(blazoredModalInstanceComponent.Instance)
-                    .AddCascadingValue(new ModalOptions { Position = ModalPosition.Center })
                     .AddChildContent(parameterBuilder));
 
             return modal.FindComponent<TComponent>();
@@ -49,7 +48,6 @@ namespace BlazoredModalTestContext.Client.Counter.Components.Modals
 
             var modal = RenderComponent<CascadingBlazoredModal>(parameters =>
                 parameters.AddCascadingValue(blazoredModalInstanceComponent.Instance)
-                    .AddCascadingValue(new ModalOptions { Position = ModalPosition.Center })
                     .AddChildContent<TComponent>());
 
             return modal.FindComponent<TComponent>();
